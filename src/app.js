@@ -5,7 +5,7 @@ const forecast=require('./utils/forecast')
 const geocode=require('./utils/geocode')
 const request=require('postman-request')
 
-
+const port=process.env.PORT || 3000
 
 const PublicDirectoryPath=path.join(__dirname,'../public')
 const ViewPath=path.join(__dirname,'../templates/views')
@@ -82,6 +82,6 @@ app.get('*',(req,res)=>
         errorMsg: "Page does not exist"})
     })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is up at port 3000')
 })
