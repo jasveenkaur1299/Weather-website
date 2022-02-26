@@ -5,11 +5,11 @@ const geocode=(address,callback)=>{
     {
         if(error)
         {
-            callback('no internet',undefined)
+            callback('No internet available :(',undefined)
         }
         else if(body.features.length===0)
         {
-           callback('place not found', undefined)
+           callback('Sorry! place not found :(', undefined)
         }
         else{
          callback(undefined,{

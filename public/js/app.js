@@ -40,7 +40,7 @@ weatherform.addEventListener('submit',(e)=>{
       response.json().then((data)=>
      {
     if(data.error){
-    msg1.textContent='balabajajja'+ data.error
+    msg1.textContent=data.error
     msg2.textContent=''}
     
     else {
