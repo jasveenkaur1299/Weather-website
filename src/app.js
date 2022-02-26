@@ -28,7 +28,7 @@ app.get('/help',(req,res)=>{
     res.render('help',{
         names:'jasveen',
         title:'Help',
-        helpmsg:'please contact at 6556565 for help'
+        helpmsg:'Please contact the owner on jasveenkaur5453@gmail.com for further assistance'
     })
 })
 
@@ -44,7 +44,7 @@ app.get('/weather',(req,res)=>
     if(!req.query.address)
     {
         return res.send({
-            error:'Please provide a search location'
+            error:'Please provide a search location!'
         })
     }
     geocode(req.query.address,(error,{latitude,longitude,location}={})=>
@@ -71,7 +71,7 @@ app.get('/help/*/',(req,res)=>{
    res.render('404',{
      names:'jasveen',
      title: '404 page',
-    errorMsg: "help page not found"
+    errorMsg: "Sorry! This help page is not found"
 })
 })
 app.get('*',(req,res)=>
@@ -79,7 +79,7 @@ app.get('*',(req,res)=>
     res.render('404',{
         names:'jasveen',
         title:'404 page',
-        errorMsg: "Page does not exist"})
+        errorMsg: "Sorry! Page does not exist"})
     })
 
 app.listen(port,()=>{
