@@ -12,7 +12,8 @@ const forecast=(a,b,callback)=>
             callback('Unable to search. Please try another place',undefined)
         }
         else{
-            callback(undefined,body.current.temperature)
+            console.log(body.current)
+            callback(undefined,'It is currently '+ body.current.temperature + ' degrees celcius. It feels like ' + body.current.feelslike + ' degrees celcius and has ' + body.current.precip +' chance of precipitation. It can be described as '+ body.current.weather_descriptions[0] + '!')
         }
 
     })
